@@ -1,9 +1,7 @@
 
 .idea
 .env
-
 .DS_Store
 
 # Node
-
 node_modules

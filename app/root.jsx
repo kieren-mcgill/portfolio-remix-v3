@@ -4,6 +4,11 @@ import {
     Outlet,
     Scripts,
 } from "@remix-run/react";
+import styles from './styles/main.css';
+
+export const links = () => [
+    { rel: 'stylesheet', href: styles },
+];
 
 export default function App() {
     return (
