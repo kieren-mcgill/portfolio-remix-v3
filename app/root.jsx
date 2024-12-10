@@ -4,13 +4,13 @@ import {
     Outlet,
     Scripts,
 } from "@remix-run/react";
-import styles from './styles/main.css';
+import styles from './styles/main.css?url';
 
 export const links = () => [
     { rel: 'stylesheet', href: styles },
 ];
 
-export default function App() {
+export function Layout({ children }){
     return (
         <html>
         <head>
@@ -22,11 +22,14 @@ export default function App() {
             <Links />
         </head>
         <body>
-        <h1>Hello world!</h1>
-        <Outlet />
-
+        {children}
         <Scripts />
         </body>
         </html>
     );
 }
+
+export default function App() {
+    return <Outlet />;
+}
+

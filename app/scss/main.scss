@@ -1,11 +1,16 @@
-$primary-color: #3498db;
+// Import utilities
+@use "utilities/variables";
+@use "utilities/mixins";
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: $primary-color;
-  color: red;
+// Import base styles
+@use "base/reset";
+@use "base/typography";
 
-  h1 {
-    text-transform: uppercase;
-  }
-}
+// Import layout styles
+@use "layouts/header";
+@use "layouts/footer";
+
+// Import component styles
+@use "components/button";
+
+

@@ -1,0 +1,6 @@
+@use "../utilities/variables" as *;
+
+h1 {
+    font-size: 10rem;
+    color: $km-green;
+}
