@@ -1,14 +1,17 @@
 // Import utilities
+@use "utilities/utils";
 @use "utilities/variables";
 @use "utilities/mixins";
 
 // Import base styles
+@use "base/base";
 @use "base/reset";
 @use "base/typography";
 
 // Import layout styles
-@use "layouts/header";
-@use "layouts/footer";
+@use "sections/hero";
+@use "sections/about";
+@use "sections/experience";
 
 // Import component styles
 @use "components/button";

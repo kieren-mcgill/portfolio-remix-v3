@@ -1,0 +1,8 @@
+@use "../utilities/mixins" as *;
+
+.about-section {
+
+  @include respond(large) {
+    min-height: 100%;
+  }
+}

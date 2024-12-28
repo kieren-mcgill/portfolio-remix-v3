@@ -1,0 +1,7 @@
+@use "../utilities/mixins" as *;
+
+.experience-section {
+  @include respond(large) {
+    min-height: 100%;
+  }
+}

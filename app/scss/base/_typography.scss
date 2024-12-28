@@ -1,6 +1,44 @@
 @use "../utilities/variables" as *;
 
-h1 {
-    font-size: 10rem;
-    color: $km-green;
+* {
+    font-family: $km-base-font;
+}
+
+h1, .h1 {
+    font-size: clamp(2.25rem, 1.212rem + 2.885vw, 3rem);
+    color: $km-slate-light;
+    line-height: 1;
+}
+
+h2, .h2 {
+    font-size: 1.125rem;
+    color: $km-slate-light;
+    font-weight: normal;
+}
+
+h3, .h3, h4, .h4 {
+    font-size: 1rem;
+    color: $km-slate-light;
+}
+
+h3, .h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: $km-slate-medium
+}
+
+a {
+    font-size: inherit;
+    color: $km-slate-light;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+i {
+    font-size: 2rem;
+    color: $km-slate-light;
 }

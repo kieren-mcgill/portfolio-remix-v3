@@ -1,0 +1,71 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.hero-section {
+  justify-content: space-between;
+
+  @include respond(large) {
+    padding: 6rem 3rem;
+    margin-bottom: unset;
+    height: calc(100vh - 12rem);
+    width: 30rem;
+  }
+
+  ul {
+    gap: 1rem;
+    list-style-type: none;
+  }
+
+  > ul {
+    display: flex;
+  }
+
+  > nav {
+    display: none;
+
+    @include respond(large) {
+      display: block;
+    }
+
+    ul {
+      width: fit-content;
+
+      li {
+        position: relative;
+        margin-left: 2.5rem;
+        transition: margin-left 0.3s ease;
+
+        > a {
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          color: $km-slate-medium;
+          transition: color 0.3s ease;
+        }
+
+        &.focus {
+          margin-left: 3.5rem;
+
+
+          > a {
+            color: $km-slate-light;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 2rem;
+          background-color: $km-slate-medium;
+          top: 50%;
+          right: calc(100% + 0.5rem);
+          transition: width 0.3s ease;
+        }
+
+        &.focus::before {
+          width: 3rem;
+        }
+      }
+    }
+  }
+}

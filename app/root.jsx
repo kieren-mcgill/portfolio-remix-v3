@@ -8,6 +8,7 @@ import styles from './styles/main.css?url';
 
 export const links = () => [
     { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css'}
 ];
 
 export function Layout({ children }){
@@ -30,6 +31,8 @@ export function Layout({ children }){
 }
 
 export default function App() {
-    return <Outlet />;
+    return(
+        <Outlet/>
+    );
 }
 
